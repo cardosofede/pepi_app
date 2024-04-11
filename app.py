@@ -52,17 +52,16 @@ def process_data(dataframe):
     return dataframe
 
 
-st.title('Pepi App')
+st.title('💄💋Pepi App')
 
 uploaded_file = st.file_uploader("Choose an Excel file")
 if uploaded_file is not None:
     dataframe = read_excel(uploaded_file)
-    dataframe = dataframe[["CODIGO", "PRODUCTO", "PRECIO", "SHADE"]].head(10)
+    dataframe = dataframe[["CODIGO", "PRODUCTO", "PRECIO", "SHADE"]]
 
     if 'CODIGO' in dataframe.columns:
         st.markdown('---')
         dataframe = process_data(dataframe)
-        st.markdown('---')
         st.write('Displaying the processed data...')
         edited_df = st.data_editor(
             dataframe,
