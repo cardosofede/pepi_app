@@ -1,0 +1,12 @@
+name: pepi_app
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - streamlit
+      - watchdog
+      - beautifulsoup4
+      - openpyxl
